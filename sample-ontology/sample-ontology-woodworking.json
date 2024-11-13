@@ -1,0 +1,183 @@
+[ {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Cheek_Cut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample comment for Cheek Cut."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cheek Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Rip_Cut"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Crosscut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample comment for a Crosscut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crosscut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Processes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Crosscut_Saw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Crosscut Saw"
+  }, {
+    "@language" : "en",
+    "@value" : "This is a sample comment for a crosscut saw."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Tools"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Half_Lap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is  sample comment for a Half Lap Joint"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Half Lap"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Joints"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Mortise_And_Tenon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mortise and Tenon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Joints"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Rip_Cut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample comment for a Rip Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rip Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Processes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Shoulder_Cut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample comment for Shoulder Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shoulder Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Crosscut"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Tenon_Saw",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample comment for a Tenon Saw"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tenon Saw"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Tools"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Joints",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample definition of woodworking joints"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Woodworking Joints"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Processes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is a sample comment for woodworking processes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Woodworking Processes"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Woodworking_Tools",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Woodworking Tools"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#crosscut_uses_tool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Shoulder_Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Crosscut_Saw"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#half_lap_is_made_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Half_Lap"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Cheek_Cut"
+  }, {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Shoulder_Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#mortise_and_tenon_is_made_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Mortise_And_Tenon"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Cheek_Cut"
+  }, {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Shoulder_Cut"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#rip_cut_uses_tool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Cheek_Cut"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/thomaspurk/ontologies/2024/10/sample-ontology-woodworking#Tenon_Saw"
+  } ]
+} ]

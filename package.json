@@ -1,0 +1,25 @@
+{
+  "name": "graph-from-llm",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A Node.js application for building a Semantic Web Ontology about Woodworking using an OpenAI LLM.",
+  "main": "src/index.js",
+  "scripts": {
+    "development": "export NODE_ENV=development&&node src/index.js",
+    "test": "vitest run --reporter verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomaspurk/graph-from-llm.git"
+  },
+  "author": "Thomas J. Purk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thomaspurk/graph-from-llm/issues"
+  },
+  "homepage": "https://github.com/thomaspurk/graph-from-llm#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "vitest": "^2.1.5"
+  }
+}

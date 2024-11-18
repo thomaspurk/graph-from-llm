@@ -1,0 +1,21 @@
+{
+    "joints": [
+        "Butt Joint",
+        "Lap Joint",
+        "Dado Joint",
+        "Rabbet Joint",
+        "Mortise and Tenon Joint",
+        "Box Joint (Finger Joint)",
+        "Biscuit Joint",
+        "Dowell Joint",
+        "Pocket Hole Joint",
+        "Miter Joint",
+        "Half Lap Joint",
+        "Tusk Tenon Joint",
+        "Sliding Dovetail Joint",
+        "Dovetail Joint",
+        "Bridle Joint",
+        "Spline Joint",
+        "Stud Joint"
+    ]
+}

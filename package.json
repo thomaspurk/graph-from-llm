@@ -20,6 +20,8 @@
   "homepage": "https://github.com/thomaspurk/graph-from-llm#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "vitest": "^2.1.5"
+    "openai": "^4.72.0",
+    "vitest": "^2.1.5",
+    "zod": "^3.23.8"
   }
 }

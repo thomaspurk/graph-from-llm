@@ -1,0 +1,14 @@
+{
+    "name": "Box Joint",
+    "aliases": [
+        "Finger Joint",
+        "Comb Joint"
+    ],
+    "description": "The box joint is a type of woodworking joint commonly used to create strong corner joints, particularly in boxes or drawers. It features a series of interlocking fingers that provide mechanical strength and a larger gluing surface area than simple butt joints.",
+    "operations": [
+        "Sawing",
+        "Chiseling",
+        "Planing",
+        "Routing"
+    ]
+}

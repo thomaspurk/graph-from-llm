@@ -1,0 +1,14 @@
+{
+    "name": "Dado Joint",
+    "aliases": [
+        "Dado",
+        "Groove Joint"
+    ],
+    "description": "A dado joint is a woodworking joint that involves cutting a rectangular notch or groove across the grain of a piece of wood, allowing another piece of wood to fit snugly within it. This joint provides excellent strength and stability, making it commonly used in shelving and cabinetry.",
+    "operations": [
+        "Dado Cutting",
+        "Chiseling",
+        "Router Grooving",
+        "Hand Sawing"
+    ]
+}

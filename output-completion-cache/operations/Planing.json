@@ -1,0 +1,19 @@
+{
+    "name": "Cutting",
+    "aliases": [
+        "Sawing",
+        "Chopping",
+        "Slicing"
+    ],
+    "description": "Cutting is a woodworking operation that involves removing material from a piece of wood to achieve a desired size, shape, or profile. It is one of the primary methods of transforming rough lumber into usable parts for various projects.",
+    "tools": [
+        "Hand saw",
+        "Panel saw",
+        "Back saw",
+        "Chisel",
+        "Jigsaw",
+        "Coping saw",
+        "Rasp",
+        "Knife"
+    ]
+}

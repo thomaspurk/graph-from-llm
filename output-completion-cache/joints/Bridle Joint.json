@@ -1,0 +1,13 @@
+{
+    "name": "Bridle Joint",
+    "aliases": [
+        "Open Mortise and Tenon Joint"
+    ],
+    "description": "The Bridle Joint is a woodworking joint that connects two pieces of wood at right angles, featuring a notch cut into one piece that allows the other piece to fit snugly into it without the need for a full mortise.",
+    "operations": [
+        "Mortising",
+        "Chiseling",
+        "Sawing",
+        "Fitting"
+    ]
+}

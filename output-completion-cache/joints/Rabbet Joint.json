@@ -1,0 +1,14 @@
+{
+    "name": "Rabbet Joint",
+    "aliases": [
+        "Rabbit Joint"
+    ],
+    "description": "A rabbet joint is a woodworking joint where a recess is cut into the edge of a piece of wood, allowing another piece to fit snugly into it. This joint is commonly used in the construction of cabinets, drawers, and bookcases, providing both structural support and an appealing visual appearance.",
+    "operations": [
+        "Rabbet Plane",
+        "Chisel",
+        "Table Saw",
+        "Router",
+        "Circular Saw"
+    ]
+}

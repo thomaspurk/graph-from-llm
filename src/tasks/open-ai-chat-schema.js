@@ -1,7 +1,12 @@
 import { z } from "zod";
 
 export const responseSchema = {
-  root: z.object({ joints: z.array(z.string()) }),
+  root: z.object({
+    name: z.string(),
+    aliases: z.array(z.string()),
+    description: z.string(),
+    joints: z.array(z.string()),
+  }),
   joints: z.object({
     name: z.string(),
     aliases: z.array(z.string()),
@@ -20,11 +25,3 @@ export const responseSchema = {
     description: z.string(),
   }),
 };
-
-// export const conceptSchema = {
-
-//     "joints": {
-
-//     }
-
-// }

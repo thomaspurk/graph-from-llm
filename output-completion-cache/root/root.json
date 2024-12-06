@@ -1,0 +1,17 @@
+{
+    "name": "root",
+    "aliases": [],
+    "description": "N/A",
+    "joints": [
+        "Butt Joint",
+        "Dado Joint",
+        "Rabbet Joint",
+        "Mortise and Tenon Joint",
+        "Lap Joint",
+        "Box Joint",
+        "Finger Joint",
+        "Mitre Joint",
+        "Bridle Joint",
+        "Pocket Hole Joint"
+    ]
+}

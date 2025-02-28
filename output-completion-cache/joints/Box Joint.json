@@ -1,14 +1,1 @@
-{
-    "name": "Box Joint",
-    "aliases": [
-        "Finger Joint",
-        "Comb Joint"
-    ],
-    "description": "The box joint is a type of woodworking joint characterized by interlocking fingers or pins. It is commonly used in box construction, providing strong mechanical strength due to its increased gluing surface. The design enhances the aesthetic appeal while maintaining structural integrity.",
-    "operations": [
-        "Cutting with a Dado Blade",
-        "Sawing with a Table Saw",
-        "Using a Chisel for cleaning",
-        "Hand-Filing edges for fitting"
-    ]
-}
+{"name":"Box Joint","aliases":["Finger Joint","Comb Joint"],"description":"The Box Joint is a type of woodworking joint used to connect two pieces of wood at right angles, typically in box constructions. It consists of interlocking 'fingers' that provide a large gluing surface and mechanical strength.","operations":["Cutting finger joints on a table saw","Using a router with a box joint jig","Hand sawing for precise finger joint cuts"]}

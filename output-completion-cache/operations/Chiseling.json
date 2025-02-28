@@ -1,1 +1,15 @@
-{"name":"Cutting","aliases":["Sawing","Trimming","Snipping"],"description":"Cutting is the woodworking operation that involves removing material from a piece of wood to achieve a desired shape or size. This can be done with various hand tools and is fundamental for creating joints, finishing edges, and preparing pieces for assembly.","tools":["Hand saw","Chisel","Utility knife","Jigsaw","Miter saw","Fret saw"]}
+{
+    "name": "Chiseling",
+    "aliases": [
+        "Chisel work",
+        "Chisel carving"
+    ],
+    "description": "Chiseling is a woodworking operation that involves removing material from wood using a chisel, which is a tool with a sharp blade and a handle. This operation is often used to create joints, carve designs, or refine the surface of a wood piece.",
+    "tools": [
+        "Chisel",
+        "Mallet",
+        "Gouge",
+        "Chip chaser",
+        "Bevel edge chisel"
+    ]
+}

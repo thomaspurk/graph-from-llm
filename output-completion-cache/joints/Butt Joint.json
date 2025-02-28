@@ -1,13 +1,1 @@
-{
-    "name": "Butt Joint",
-    "aliases": [
-        "Square Joint"
-    ],
-    "description": "A Butt Joint is a basic woodworking joint where two pieces of wood are joined together by simply butting the ends of the pieces against each other. It is one of the simplest and most commonly used joints in carpentry and furniture making.",
-    "operations": [
-        "Cutting",
-        "Planing",
-        "Chiseling",
-        "Smoothing"
-    ]
-}
+{"name":"Butt Joint","aliases":["Square Joint"],"description":"A Butt Joint is a basic woodworking joint where two pieces of wood are joined by simply butting one piece against another, typically at the end. This joint is commonly used for frame construction and is simple to create, making it a staple in woodworking projects.","operations":["Cutting the ends of the pieces to be joined square","Aligning the edges of the pieces","Ensuring proper fit and flush surfaces"]}

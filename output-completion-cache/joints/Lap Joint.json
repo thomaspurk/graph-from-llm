@@ -1,13 +1,1 @@
-{
-    "name": "Lap Joint",
-    "aliases": [
-        "Lapped Joint"
-    ],
-    "description": "The Lap Joint is a woodworking joint where two pieces of wood overlap each other. It is commonly used in framing, cabinetry, and other applications where a strong joint is needed without requiring a complete joint through both pieces.",
-    "operations": [
-        "Chiseling",
-        "Sawing",
-        "Planing",
-        "Scribing"
-    ]
-}
+{"name":"Lap Joint","aliases":["Lapped Joint","Overlap Joint"],"description":"The Lap Joint is a woodworking joint formed by overlapping two pieces of material, typically where one piece is laid over the other to provide a face-to-face contact area. This joint is strong and can be used in a variety of applications such as frames, tables, and structural elements.","operations":["Cutting","Routing","Chiseling","Planing"]}

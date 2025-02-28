@@ -43,6 +43,8 @@ export class ontologyBuilderModule {
       if (illegalChars.length == 0) {
         // Clean up spaces and create an object storing the value
         value = value.replace(/\s+/g, "_");
+        // Format the value: Upper Case
+        value = value.replace(/\b\w/g, (c) => c.toUpperCase());
         returnObject["@id"] = this.namespace + "#" + value;
         ontologyBuilderModule.appendType(returnObject, ontologyBuilderModule.typeClass);
       } else {
@@ -88,8 +90,13 @@ export class ontologyBuilderModule {
       if (illegalChars.length == 0) {
         // Clean up spaces and create an object storing the value
         value = value.replace(/\s+/g, "_");
+        // Format the value: Upper Case
+        value = value.replace(/\b\w/g, (c) => c.toUpperCase());
         returnObject["@id"] = this.namespace + "#" + value;
-        ontologyBuilderModule.appendType(returnObject, ontologyBuilderModule.typeObjectProp);
+        ontologyBuilderModule.appendType(
+          returnObject,
+          ontologyBuilderModule.typeObjectProp
+        );
       } else {
         throw (
           new Error(
@@ -201,11 +208,13 @@ export class ontologyBuilderModule {
    * @memberof ontologyBuilderModule
    */
   static appendLabel(entity, value, language = "en") {
-    // Short hand property for comments
+    // Short hand property for labels
     const prop = ontologyBuilderModule.propLabel;
 
     // Ensure the value input is a string
     if (typeof value == "string") {
+      // Format the value: Upper Case
+      value = value.replace(/\b\w/g, (c) => c.toUpperCase());
       value = { "@language": language, "@value": value };
     } else {
       throw (
@@ -217,7 +226,7 @@ export class ontologyBuilderModule {
       );
     }
 
-    // Ensure that the object's comment property is an array or undefined
+    // Ensure that the object's labels property is an array or undefined
     if (entity[prop] && Array.isArray(entity[prop])) {
       entity[prop].push(value);
     } else if (entity[prop] == undefined) {
@@ -250,6 +259,8 @@ export class ontologyBuilderModule {
       if (illegalChars.length == 0) {
         // Clean up spaces and create an object storing the value
         value = value.replace(/\s+/g, "_");
+        // Format the value: Upper Case
+        value = value.replace(/\b\w/g, (c) => c.toUpperCase());
         value = { "@id": this.namespace + "#" + value };
       } else {
         throw (
@@ -306,6 +317,8 @@ export class ontologyBuilderModule {
       if (illegalChars.length == 0) {
         // Clean up spaces and create an object storing the value
         value = value.replace(/\s+/g, "_");
+        // Format the value: Upper Case
+        value = value.replace(/\b\w/g, (c) => c.toUpperCase());
         value = { "@id": this.namespace + "#" + value };
       } else {
         throw (
@@ -362,6 +375,8 @@ export class ontologyBuilderModule {
       if (illegalChars.length == 0) {
         // Clean up spaces and create an object storing the value
         value = value.replace(/\s+/g, "_");
+        // Format the value: Upper Case
+        value = value.replace(/\b\w/g, (c) => c.toUpperCase());
         value = { "@id": this.namespace + "#" + value };
       } else {
         throw (

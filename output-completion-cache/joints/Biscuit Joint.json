@@ -1,0 +1,11 @@
+{
+    "name": "Biscuit Joint",
+    "aliases": [
+        "Biscuit Joinery"
+    ],
+    "description": "The Biscuit Joint is a type of woodworking joint that uses a small, oval-shaped piece of wood known as a biscuit to connect two pieces of wood together. The biscuit is inserted into matching grooves cut into the edges of the pieces to be joined, providing alignment and a larger glue surface for a strong joint.",
+    "operations": [
+        "Groove Cutting",
+        "Biscuit Insertion"
+    ]
+}

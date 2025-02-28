@@ -1,15 +1,1 @@
-{
-    "name": "Mortise and Tenon Joint",
-    "aliases": [
-        "Mortise Joint",
-        "Tenon Joint"
-    ],
-    "description": "The Mortise and Tenon Joint is a traditional woodworking joint that connects two pieces of wood at right angles. It consists of a mortise, which is a cavity cut into one piece of wood, and a tenon, which is a projection on the end of the other piece that fits into the mortise. This joint is known for its strength and stability, making it ideal for frame construction and furniture making.",
-    "operations": [
-        "Mortising",
-        "Tenoning",
-        "Chiseling",
-        "Drilling",
-        "Sawing"
-    ]
-}
+{"name":"Mortise and Tenon Joint","aliases":["Mortise Joint","Tenon Joint"],"description":"The Mortise and Tenon joint is a classic woodworking joint used to connect two pieces of wood at a right angle. It consists of a mortise, which is a cavity or hole cut into one piece, and a tenon, which is a protruding tongue that fits snugly into the mortise of the other piece. This joint is known for its strength and durability, making it ideal for constructing frames, furniture, and doors.","operations":["Cutting the Mortise","Cutting the Tenon","Chiseling the Mortise","Scribing the Tenon","Fitting the Tenon"]}

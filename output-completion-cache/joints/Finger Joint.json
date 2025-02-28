@@ -1,15 +1,1 @@
-{
-    "name": "Finger Joint",
-    "aliases": [
-        "Box Joint",
-        "Commercial Joint"
-    ],
-    "description": "The Finger Joint is a type of woodworking joint that interlocks two pieces of wood at their ends, featuring a series of complementary notches resembling fingers. This joint provides a large glue surface area, making it ideal for bond strength and alignment in edge-gluing operations, which is particularly useful for constructing boxes or panels.",
-    "operations": [
-        "Dado cutting",
-        "Chisel work",
-        "Sawing",
-        "Filing",
-        "Sanding"
-    ]
-}
+{"name":"Finger Joint","aliases":["Box Joint","Cove Joint"],"description":"The Finger Joint is a type of woodworking joint used to connect two pieces of wood end-to-end. It consists of interlocking fingers that provide a large surface area for gluing, resulting in a strong and stable joint. This joint is commonly found in the construction of boxes, drawers, and other cases where strength and aesthetics are important.","operations":["Cutting the fingers","Trimming the edges","Aligning the joint surfaces"]}

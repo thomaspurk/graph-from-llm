@@ -1,13 +1,1 @@
-{
-    "name": "Bridle Joint",
-    "aliases": [
-        "Open Mortise and Tenon Joint"
-    ],
-    "description": "The Bridle Joint is a woodworking joint that connects two pieces of wood at right angles, featuring a notch cut into one piece that allows the other piece to fit snugly into it without the need for a full mortise.",
-    "operations": [
-        "Mortising",
-        "Chiseling",
-        "Sawing",
-        "Fitting"
-    ]
-}
+{"name":"Bridle Joint","aliases":["Biscuit Joint","Finger Joint"],"description":"The Bridle Joint is a type of woodworking joint that connects two pieces of wood at right angles, where one piece is cut with a notch (or 'bridle') that slips over the edge of the other piece. This joint provides a strong connection and is often used in frame construction, such as in doors or window frames.","operations":["Cutting a mortise","Cutting a tenon","Chiseling","Sawing"]}

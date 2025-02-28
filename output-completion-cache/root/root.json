@@ -4,14 +4,19 @@
     "description": "N/A",
     "joints": [
         "Butt Joint",
+        "Lap Joint",
         "Dado Joint",
         "Rabbet Joint",
         "Mortise and Tenon Joint",
-        "Lap Joint",
-        "Box Joint",
         "Finger Joint",
-        "Mitre Joint",
+        "Miter Joint",
+        "Box Joint",
+        "Biscuit Joint",
+        "Dowell Joint",
+        "Pocket Joint",
+        "Half Lap Joint",
+        "Tongue and Groove Joint",
         "Bridle Joint",
-        "Pocket Hole Joint"
+        "Saddle Joint"
     ]
 }

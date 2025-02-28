@@ -1,0 +1,14 @@
+{
+    "name": "Tongue and Groove Joint",
+    "aliases": [
+        "T&G Joint",
+        "Tongue-and-Groove"
+    ],
+    "description": "A type of joint in woodworking where a protruding tongue from one board fits into a corresponding groove in another board. This joint is commonly used for flooring, paneling, and cabinetry, providing a strong connection and a seamless appearance.",
+    "operations": [
+        "Beveling",
+        "Grooving",
+        "Rabbeting",
+        "Edge Planing"
+    ]
+}

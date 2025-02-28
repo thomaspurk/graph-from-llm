@@ -1,3 +1,8 @@
+/**
+ * @author Thomas J. Purk
+ * @file A set of JSON schemas to use with OpenAI's "response_format" property on chat completions
+ */
+
 import { z } from "zod";
 
 export const responseSchema = {

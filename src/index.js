@@ -1,5 +1,5 @@
 /**
- * @file
+ * @file The main point of entry for the application. Initiates the core application loop.
  * @author Thomas J. Purk
  */
 
@@ -8,15 +8,23 @@ import { completeChat } from "./tasks/open-ai-chat.js";
 import { ontologyBuilderModule } from "./tasks/ontology-builder.js";
 import fs from "fs";
 
+// The folder to store the LLM Chat completion data
 const dirCompletions = "output-completion-cache";
+
+// The folder to store the resulting ontology
 const dirOutputOntology = "output-ontology";
+
+// The base identifier for entities in the ontology
 const ontologyUri =
   "http://www.semanticweb.org/thomaspurk/ontologies/hand-tool-woodworking";
 
+// Instantiate an instance of the Ontology Builder. Handles building an ontology from LLM answers
 const ontologyBuilder = new ontologyBuilderModule(ontologyUri);
 
+// A base object to initiate the first loop of the application logic
 const seedObject = { root: ["root"] };
 
+// Message templates from which to build the LLM chat completions
 const messages = {
   rootSystemMessage: "You are an expert in the domain of hand tool woodworking. ",
   commonUserMessages: ["Do not place aliases or alternate names in parenthesis."],
@@ -27,8 +35,7 @@ const messages = {
   tools: `Descibe the <name> woodworking tool. Include the tool name, a short description, and any common aliases.  <commonUserMessages>`,
 };
 
-// Step 1: Get a list of woodworking joints
-// Joints are the root of the model
+// Initiate the program loop
 const rootConceptArray = await childConceptsProcessor(seedObject);
 
 // Write the ontology to file
@@ -38,7 +45,7 @@ fs.writeFileSync(
 );
 
 /**
- * @function childConceptsProcessor
+ * @function childConceptsProcessor A function to recursively process parent and children concepts. Writes the final ontology to file
  * @param {object} conceptsObject An object containing a property with the parentConcept as the name and the list of concepts as a string Array.
  * @return {array} An array of Objects.
  */
@@ -81,6 +88,7 @@ async function childConceptsProcessor(conceptsObject) {
       // Tailor the user message to the current child concept name
       const childUserMessage = userMessage.replace("<name>", childName);
 
+      // Get an JSON String containing the LLM's answer regarding the topic of interest
       const conceptJsonString = await completeChat(
         messages.rootSystemMessage,
         childUserMessage,

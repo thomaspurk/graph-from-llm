@@ -1,18 +1,18 @@
 /**
- * @file Functions for creating JSON-LD formated ontologies which can be opened by Protege.
- * @todo convert to class with a constructor since not all properties will be statice
+ * @author Thomas J. Purk
+ * @file Class and Functions for creating JSON-LD formated ontologies which can be opened by Protege.
  */
 
 const illegalChars = `<>#%^{}|"\`\\`;
 
 export class ontologyBuilderModule {
   // Class Static Properties
+  // Standard property names used in OWL and RDF objects
   static propComment = "http://www.w3.org/2000/01/rdf-schema#comment";
   static propSubClassOf = "http://www.w3.org/2000/01/rdf-schema#subClassOf";
   static propLabel = "http://www.w3.org/2000/01/rdf-schema#label";
   static propDomain = "http://www.w3.org/2000/01/rdf-schema#domain";
   static propRange = "http://www.w3.org/2000/01/rdf-schema#range";
-
   static typeOntology = "http://www.w3.org/2002/07/owl#Ontology";
   static typeClass = "http://www.w3.org/2002/07/owl#Class";
   static typeObjectProp = "http://www.w3.org/2002/07/owl#ObjectProperty";
@@ -22,16 +22,18 @@ export class ontologyBuilderModule {
   namespace = "";
 
   constructor(namespace) {
+    // Set instance properties
     this.namespace = namespace;
     this.arrOntology.push({
       "@id": namespace,
       "@type": [ontologyBuilderModule.typeOntology],
     });
   }
+
   /**
    * @function newClass Creates a class object
-   * @param {string} value
-   * @return {onbject}
+   * @param {string} value The main URI string which identifies the ontology.
+   * @return {object} An object storing information about the ontology including an array of ontology entities
    * @memberof ontologyBuilderModule
    */
   newClass(value) {
@@ -78,8 +80,8 @@ export class ontologyBuilderModule {
 
   /**
    * @function newObjectProperty Creates an Object Propert object
-   * @param {string} value
-   * @return {onbject}
+   * @param {string} value The name of the new object to combine with the ontology URI to create a unique identifier
+   * @return {object} An object representing the new ontology object property
    * @memberof ontologyBuilderModule
    */
   newObjectProperty(value) {
@@ -128,12 +130,12 @@ export class ontologyBuilderModule {
   /**
    * @function appendType Adds the value to the type array of the entity
    * @static
-   * @param {object} entity
-   * @param {string} value
+   * @param {object} entity The ontology object that will get the new type
+   * @param {string} value The name of the new type
    * @memberof ontologyBuilderModule
    */
   static appendType(entity, value) {
-    // Short hand property for comments
+    // Short hand property for types
     const prop = "@type";
     // Ensure the value input is a string
     if (typeof value != "string") {
@@ -146,7 +148,7 @@ export class ontologyBuilderModule {
       );
     }
 
-    // Ensure that the object's comment property is an array or undefined
+    // Ensure that the object's type property is an array or undefined
     if (entity[prop] && Array.isArray(entity[prop])) {
       entity[prop].push(value);
     } else if (entity[prop] == undefined) {
@@ -164,9 +166,9 @@ export class ontologyBuilderModule {
   /**
    * @function appendComment Adds the value to the the comments array, as an object, of the entity
    * @static
-   * @param {object} entity
-   * @param {string} value
-   * @param {string} language
+   * @param {object} entity The ontology object that will get the new comment
+   * @param {string} value The text of the comment
+   * @param {string} [language=en] The language the comment is writen in
    * @memberof ontologyBuilderModule
    */
   static appendComment(entity, value, language = "en") {
@@ -204,9 +206,9 @@ export class ontologyBuilderModule {
   /**
    * @function appendLabel Adds the value to the the label array, as an object, of the entity
    * @static
-   * @param {object} entity
-   * @param {string} value
-   * @param {string} language
+   * @param {object} entity The ontology object that will get the new label
+   * @param {string} value The label string
+   * @param {string} [language=en] The language the comment is writen in
    * @memberof ontologyBuilderModule
    */
   static appendLabel(entity, value, language = "en") {
@@ -244,10 +246,9 @@ export class ontologyBuilderModule {
   }
 
   /**
-   * @function appendSubClassOf Adds the value to the the label array, as an object, of the entity. Not static because it depends on the namepace of the class instance.
-   * @param {object} entity
-   * @param {string} value
-   * @param {string} language
+   * @function appendSubClassOf Adds the value to the the subClassOf array, as an object, of the entity. Not static because it depends on the namepace of the class instance.
+   * @param {object} entity The ontology object that will get the new subClassOf (parent)
+   * @param {string} value The name of the parent the entity is a sub class of
    * @memberof ontologyBuilderModule
    */
   appendSubClassOf(entity, value) {
@@ -304,9 +305,8 @@ export class ontologyBuilderModule {
 
   /**
    * @function appendDomain Adds the value to the domain array, as an object, of the entity. Not static because it depends on the namepace of the class instance.
-   * @param {object} entity
-   * @param {string} value
-   * @param {string} language
+   * @param {object} entity The ontology object property that will get the new domain
+   * @param {string} value The name of ontology entity to add as a domain
    * @memberof ontologyBuilderModule
    */
   appendDomain(entity, value) {
@@ -363,9 +363,8 @@ export class ontologyBuilderModule {
 
   /**
    * @function appendRange Adds the value to the range array, as an object, of the entity. Not static because it depends on the namepace of the class instance.
-   * @param {object} entity
-   * @param {string} value
-   * @param {string} language
+   * @param {object} entity The ontology object property that will get the new range
+   * @param {string} value The name of ontology entity to add as a range
    * @memberof ontologyBuilderModule
    */
   appendRange(entity, value) {
@@ -426,21 +425,31 @@ export class ontologyBuilderModule {
    * @param {string} value The input string to test.
    * @returns {Array} An array of illegal characters found in the string, empty array means no illegal characters
    * @memberof ontologyBuilderModule
-   * @todo Move "illegalChars" to a .env file
-   * @todo Create unit tests
-   * @todo Add error trapping and logging
-   * @todo Add code comments
-   * @todo Validate type of "value"
    */
   static hasIllegalCharacters(value) {
     let returnArray = [];
     const illegalChars = `<>#%^{}|"\`\\`;
     const arrayChars = illegalChars.split("");
-    arrayChars.forEach((char) => {
-      if (value.includes(char)) {
-        returnArray.push(char);
-      }
-    });
+
+    // Ensure the value input is a string
+    if (typeof value == "string") {
+      // Check if the string value contains any illegal characters
+      arrayChars.forEach((char) => {
+        if (value.includes(char)) {
+          // If the illegal characters is found track it in the array
+          returnArray.push(char);
+        }
+      });
+    } else {
+      throw (
+        new Error(
+          "Malformated Input: 'value' must be a string. Received " + JSON.stringify(value)
+        ) +
+        " as type " +
+        typeof value
+      );
+    }
+
     return returnArray;
   }
 }

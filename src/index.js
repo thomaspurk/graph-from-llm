@@ -15,12 +15,13 @@ const ontologyUri =
 
 const ontologyBuilder = new ontologyBuilderModule(ontologyUri);
 
-const seedObject = {};
+const seedObject = { root: ["root"] };
 
 const messages = {
   rootSystemMessage: "You are an expert in the domain of hand tool woodworking. ",
   commonUserMessages: ["Do not place aliases or alternate names in parenthesis."],
-  root: `Create an object where name is "root," description is "N/A," alias is an empty array, and joints is a list of woodworking joints that are used to join wooded workpieces together.`,
+  root: `Create an object where name is "root," description is "N/A," alias is an empty array, joints is a list of woodworking joints that are used to join wooded workpieces together, and subclasses is a string array containing "Joints," "Operations," and "Tools"`,
+  subclasses: `Create an object where the name is <name> and the description is a definition of the object.`,
   joints: `Descibe the <name> woodworking joint. Include the joint name, a short description, any common aliases, and the name of woodworking operations used to form the joint. Do not include the names of operations for assembling the joint with glue or fastners. <commonUserMessages>`,
   operations: `Descibe the <name> woodworking operation. Include the operation name, a short description, any common aliases, and the name of woodworking hand tools used to complete the operation.  <commonUserMessages>`,
   tools: `Descibe the <name> woodworking tool. Include the tool name, a short description, and any common aliases.  <commonUserMessages>`,
@@ -28,11 +29,11 @@ const messages = {
 
 // Step 1: Get a list of woodworking joints
 // Joints are the root of the model
-const rootConceptArray = await childConceptsProcessor({ root: ["root"] });
+const rootConceptArray = await childConceptsProcessor(seedObject);
 
 // Write the ontology to file
 fs.writeFileSync(
-  `${dirOutputOntology}/output_ontology.json`,
+  `${dirOutputOntology}/hand_tool_woodworking_ontology.json`,
   JSON.stringify(ontologyBuilder.arrOntology)
 );
 
@@ -91,7 +92,7 @@ async function childConceptsProcessor(conceptsObject) {
       const childConceptObject = JSON.parse(conceptJsonString);
 
       // Add information to the ontology
-      if (parentName != "root") {
+      if (!["root", "subclasses"].includes(parentName)) {
         // Create the class
         const ontClass = ontologyBuilder.newClass(childConceptObject["name"]);
 
@@ -102,7 +103,6 @@ async function childConceptsProcessor(conceptsObject) {
         ontologyBuilderModule.appendLabel(ontClass, childName);
 
         // Add aliases as additional labels
-        // TODO: Look into the appendLabel function and why it is on the module not the object instance
         if (
           childConceptObject["aliases"] &&
           Array.isArray(childConceptObject["aliases"])
@@ -118,6 +118,33 @@ async function childConceptsProcessor(conceptsObject) {
             ontClass,
             childConceptObject["description"]
           );
+        }
+
+        // Find properties of the concept object that should create Object Property -> Domain & Range
+        const propertyNames = Object.keys(childConceptObject).filter(
+          (prop) =>
+            !["name", "aliases", "descriptions"].includes(prop) &&
+            Array.isArray(childConceptObject[prop])
+        );
+
+        // Loop each property name & create an object property
+        for (let i = 0; i < propertyNames.length; i++) {
+          const propertyName = propertyNames[i];
+          const domainName = childConceptObject["name"];
+          const rangeNames = childConceptObject[propertyName];
+
+          // Create the Object Property
+          const objectProperty = ontologyBuilder.newObjectProperty(
+            `${domainName}_has_${propertyName}`
+          );
+          // Add the domain to the Object Property
+          ontologyBuilder.appendDomain(objectProperty, domainName);
+
+          // Add the ranges to the Object Property
+          for (let ii = 0; ii < rangeNames.length; ii++) {
+            const rangeName = rangeNames[ii];
+            ontologyBuilder.appendRange(objectProperty, rangeName);
+          }
         }
       }
 

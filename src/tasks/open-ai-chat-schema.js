@@ -6,6 +6,11 @@ export const responseSchema = {
     aliases: z.array(z.string()),
     description: z.string(),
     joints: z.array(z.string()),
+    subclasses: z.array(z.string()),
+  }),
+  subclasses: z.object({
+    name: z.string(),
+    description: z.string(),
   }),
   joints: z.object({
     name: z.string(),

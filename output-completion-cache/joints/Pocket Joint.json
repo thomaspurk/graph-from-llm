@@ -1,1 +1,11 @@
-{"name":"Pocket Joint","aliases":["Pocket Hole Joint"],"description":"The Pocket Joint is a woodworking joint created by drilling an angled hole in one workpiece and connecting it to another using a screw. It allows for strong connections without visible fasteners on the exterior of the workpieces.","operations":["Drilling an angled pocket hole","Driving a screw into the pocket hole"]}
+{
+    "name": "Pocket Joint",
+    "aliases": [
+        "Pocket Hole Joint"
+    ],
+    "description": "The Pocket Joint is a woodworking joint created by drilling an angled hole in one workpiece and connecting it to another using a screw. It allows for strong connections without visible fasteners on the exterior of the workpieces.",
+    "operations": [
+        "Drilling an angled pocket hole",
+        "Driving a screw into the pocket hole"
+    ]
+}

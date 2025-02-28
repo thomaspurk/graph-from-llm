@@ -41,10 +41,11 @@ export class ontologyBuilderModule {
       // Test for Illegal Characters
       const illegalChars = ontologyBuilderModule.hasIllegalCharacters(value);
       if (illegalChars.length == 0) {
-        // Clean up spaces and create an object storing the value
-        value = value.replace(/\s+/g, "_");
         // Format the value: Upper Case
         value = value.replace(/\b\w/g, (c) => c.toUpperCase());
+        // Clean up spaces and create an object storing the value
+        value = value.replace(/\s+/g, "_");
+
         returnObject["@id"] = this.namespace + "#" + value;
         ontologyBuilderModule.appendType(returnObject, ontologyBuilderModule.typeClass);
       } else {
@@ -88,10 +89,11 @@ export class ontologyBuilderModule {
       // Test for Illegal Characters
       const illegalChars = ontologyBuilderModule.hasIllegalCharacters(value);
       if (illegalChars.length == 0) {
-        // Clean up spaces and create an object storing the value
-        value = value.replace(/\s+/g, "_");
         // Format the value: Upper Case
         value = value.replace(/\b\w/g, (c) => c.toUpperCase());
+        // Clean up spaces and create an object storing the value
+        value = value.replace(/\s+/g, "_");
+
         returnObject["@id"] = this.namespace + "#" + value;
         ontologyBuilderModule.appendType(
           returnObject,
@@ -257,10 +259,11 @@ export class ontologyBuilderModule {
       // Test for Illegal Characters
       const illegalChars = ontologyBuilderModule.hasIllegalCharacters(value);
       if (illegalChars.length == 0) {
-        // Clean up spaces and create an object storing the value
-        value = value.replace(/\s+/g, "_");
         // Format the value: Upper Case
         value = value.replace(/\b\w/g, (c) => c.toUpperCase());
+        // Clean up spaces and create an object storing the value
+        value = value.replace(/\s+/g, "_");
+
         value = { "@id": this.namespace + "#" + value };
       } else {
         throw (
@@ -315,10 +318,11 @@ export class ontologyBuilderModule {
       // Test for Illegal Characters
       const illegalChars = ontologyBuilderModule.hasIllegalCharacters(value);
       if (illegalChars.length == 0) {
-        // Clean up spaces and create an object storing the value
-        value = value.replace(/\s+/g, "_");
         // Format the value: Upper Case
         value = value.replace(/\b\w/g, (c) => c.toUpperCase());
+        // Clean up spaces and create an object storing the value
+        value = value.replace(/\s+/g, "_");
+
         value = { "@id": this.namespace + "#" + value };
       } else {
         throw (
@@ -373,10 +377,11 @@ export class ontologyBuilderModule {
       // Test for Illegal Characters
       const illegalChars = ontologyBuilderModule.hasIllegalCharacters(value);
       if (illegalChars.length == 0) {
-        // Clean up spaces and create an object storing the value
-        value = value.replace(/\s+/g, "_");
         // Format the value: Upper Case
         value = value.replace(/\b\w/g, (c) => c.toUpperCase());
+        // Clean up spaces and create an object storing the value
+        value = value.replace(/\s+/g, "_");
+
         value = { "@id": this.namespace + "#" + value };
       } else {
         throw (

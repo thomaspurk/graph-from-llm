@@ -2,7 +2,7 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-v18.17.1-green) ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 
-## 📖 About
+## About
 
 **graph-from-llm** demonstrates how a generative AI tool can be used to automate the initial draft of a Semantic Web Ontology. The code in this project represents an initial prototype and would require additional refactoring to make it more flexible and adaptable to additional use case.
 
@@ -24,7 +24,7 @@ Other topics could be explored by updating the "messages" javascript object in t
 
 The hand tool woodworking topic was selected because as a long time woodworking hobbyist I have a certain degree of subject matter expertise, which makes engineering prompts and assessing results more convenient. Also, the woodworking topic contains critical nuances in language that stem from historic and technological developments as well as cultural traditions. So, if an LLM can operated effectively within the woodworking knowledge domain, then it should have proven itself capable of adding value to any number of human activities.
 
-## 📋 Future Work
+## Future Work
 
 - [ ] Additional unit tests for open-ai-chat.js
 - [ ] Fix bug resulting in orphaned class due to domain/range object properties
@@ -34,7 +34,7 @@ The hand tool woodworking topic was selected because as a long time woodworking 
 - [ ] Refactor to support configuration of different APIs, such as hugging face.
 - [ ] Refactor to support configuratoin of different knowledge domains
 
-## ⚡ Installation
+## Installation
 
 Clone this repository and install dependencies:
 
@@ -44,7 +44,7 @@ cd your-repo
 npm install
 ```
 
-## 🔧 Environment Variables
+## Environment Variables
 
 1. Using your own account, log into the [OpenAI API Keys](https://platform.openai.com/api-keys) page. Create a new key and copy it to your clipboard. Or use your own existing API Key.
 
@@ -60,7 +60,7 @@ npm install
 OPENAI_API_KEY=<paste you API key here>
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Run Unit Tests
 
@@ -82,11 +82,11 @@ npm run development
 
 The current version of code produces a JSON file containg a Protege compatible JSON-LD formated Semantic Web Ontology. The best way to inspect the results is by opening the file in the [Protege](https://protege.stanford.edu/) application, which is a free application maintained by Standford University.
 
-## 📜 License
+## License
 
 This project is licensed under the Appache 2.0 License. See the [LICENSE](LICENSE) file for details.
 
-## 📬 Contact
+## Contact
 
 For questions or feedback, contact:
 

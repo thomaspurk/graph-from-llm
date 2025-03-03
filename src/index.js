@@ -45,7 +45,7 @@ fs.writeFileSync(
 );
 
 /**
- * @function childConceptsProcessor A function to recursively process parent and children concepts. Writes the final ontology to file
+ * @function childConceptsProcessor Main processing loop. A function to recursively process parent and children concepts. Writes the final ontology to file.
  * @param {object} conceptsObject An object containing a property with the parentConcept as the name and the list of concepts as a string Array.
  * @return {array} An array of Objects.
  */

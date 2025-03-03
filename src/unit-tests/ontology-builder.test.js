@@ -263,7 +263,7 @@ describe("appendLabel()", () => {
   it("should add a label property to the element if no label property exists", () => {
     // Arrange
 
-    const input = "This is a sample label for unit testing";
+    const input = "Sample Label";
     const inputObject = {
       "@id": ontologyUri + "#Unit_Test_Class_Name",
     };
@@ -285,7 +285,7 @@ describe("appendLabel()", () => {
   it("should append a label item to the element if a label property exists", () => {
     // Arrange
 
-    const input = "This is a sample label for unit testing";
+    const input = "Sample Label";
     const inputObject = {
       "@id": ontologyUri + "#Unit_Test_Class_Name",
     };
@@ -316,7 +316,7 @@ describe("appendLabel()", () => {
   it("should throw an error if the label property is not an array or undefined", () => {
     // Arrange
 
-    const input = "This is a sample label for unit testing";
+    const input = "Sample Label";
     const inputObject = {
       "@id": ontologyUri + "#Unit_Test_Class_Name",
     };
@@ -395,7 +395,7 @@ describe("appendSubclassOf()", () => {
   });
   it("should throw an error if the type property is not an array or undefined", () => {
     // Arrange
-    const input = "This is a sample label for unit testing";
+    const input = "Sample Label";
     const inputObject = {
       "@id": ontologyUri + "#Unit_Test_Class_Name",
     };

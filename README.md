@@ -2,15 +2,6 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-v18.17.1-green) ![License](https://img.shields.io/badge/license-Apache%202.0-blue)
 
-## 📌 Table of Contents
-
-- [About](#about)
-- [Installation](#installation)
-- [Environment Variables](#environment-variables)
-- [Usage](#usage)
-- [License](#license)
-- [Contact](#contact)
-
 ## 📖 About
 
 **graph-from-llm** demonstrates how a generative AI tool can be used to automate the initial draft of a Semantic Web Ontology. The code in this project represents an initial prototype and would require additional refactoring to make it more flexible and adaptable to additional use case.
